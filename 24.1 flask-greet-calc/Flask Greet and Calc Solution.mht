@@ -1,0 +1,1189 @@
+From: <Saved by Blink>
+Snapshot-Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/flask-greet-calc/solution/index.html
+Subject: Flask Greet and Calc Solution
+Date: Tue, 18 Oct 2022 20:17:59 -0000
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE----"
+
+
+------MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE----
+Content-Type: text/html
+Content-ID: <frame-4B00E3158A4E4077CB5E250C9213336C@mhtml.blink>
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/flask-greet-calc/solution/index.html
+
+<!DOCTYPE html><html lang=3D"en"><head><meta http-equiv=3D"Content-Type" co=
+ntent=3D"text/html; charset=3DUTF-8">
+   =20
+    <title>Flask Greet and Calc Solution</title>
+
+    <link rel=3D"stylesheet" href=3D"https://curric.springboard.com/softwar=
+e-engineering-career-track/default/exercises/flask-greet-calc/_static/pygme=
+nts.css" type=3D"text/css">
+    <link rel=3D"stylesheet" href=3D"https://curric.springboard.com/softwar=
+e-engineering-career-track/default/exercises/flask-greet-calc/_static/hando=
+uts-sphinx.css">
+
+   =20
+    <link href=3D"https://fonts.googleapis.com/css?family=3DRoboto:400,600,=
+700,400italic,600italic,700italic|Source+Code+Pro:400,700" rel=3D"styleshee=
+t" type=3D"text/css">
+   =20
+</head>
+<body>
+<div id=3D"page-wrapper">
+    <div id=3D"page-sidebar">
+        <header>
+            <p class=3D"project">Springboard</p>
+
+            <p class=3D"title">Flask Greet and Calc Solution</p>
+
+            <p class=3D"backlink"><a href=3D"https://curric.springboard.com=
+/software-engineering-career-track/default/exercises/flask-greet-calc/solut=
+ion/index.html"> =C2=AB Back to Homepage</a></p>
+
+        </header>
+        <div id=3D"toc">
+            <ul>
+<li><a class=3D"reference internal" href=3D"https://curric.springboard.com/=
+software-engineering-career-track/default/exercises/flask-greet-calc/soluti=
+on/index.html#">Flask Greet and Calc Solution</a><ul>
+<li><a class=3D"reference internal" href=3D"https://curric.springboard.com/=
+software-engineering-career-track/default/exercises/flask-greet-calc/soluti=
+on/index.html#greet">Greet</a></li>
+<li><a class=3D"reference internal" href=3D"https://curric.springboard.com/=
+software-engineering-career-track/default/exercises/flask-greet-calc/soluti=
+on/index.html#calc">Calc</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+    </div>
+    <div id=3D"page-content">
+       =20
+  <div class=3D"section" id=3D"flask-greet-and-calc-solution">
+<h1>Flask Greet and Calc Solution</h1>
+<p><a class=3D"reference external" href=3D"https://curric.springboard.com/s=
+oftware-engineering-career-track/default/exercises/flask-greet-calc-solutio=
+n.zip">Download Solution</a></p>
+<div class=3D"section" id=3D"greet">
+<h2>Greet</h2>
+<div class=3D"literal-block-wrapper docutils container" id=3D"id1">
+<div class=3D"code-block-caption"><span class=3D"caption-text">greet/app.py=
+</span></div>
+<div class=3D"highlight-python notranslate"><div class=3D"highlight"><pre><=
+span></span><span class=3D"kn">from</span> <span class=3D"nn">flask</span> =
+<span class=3D"kn">import</span> <span class=3D"n">Flask</span>
+
+<span class=3D"n">app</span> <span class=3D"o">=3D</span> <span class=3D"n"=
+>Flask</span><span class=3D"p">(</span><span class=3D"vm">__name__</span><s=
+pan class=3D"p">)</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s1">'/welcome'</span><s=
+pan class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">welcome</span><span class=
+=3D"p">():</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"welcome"</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s1">'/welcome/back'</sp=
+an><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">welcome_back</span><span cl=
+ass=3D"p">():</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"welcome back"</span=
+>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s1">'/welcome/home'</sp=
+an><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">welcome_home</span><span cl=
+ass=3D"p">():</span>
+    <span class=3D"k">return</span> <span class=3D"s2">"welcome home"</span=
+>
+</pre></div>
+</div>
+</div>
+</div>
+<div class=3D"section" id=3D"calc">
+<h2>Calc</h2>
+<div class=3D"literal-block-wrapper docutils container" id=3D"id2">
+<div class=3D"code-block-caption"><span class=3D"caption-text">calc/app.py<=
+/span></div>
+<div class=3D"highlight-python notranslate"><div class=3D"highlight"><pre><=
+span></span><span class=3D"kn">from</span> <span class=3D"nn">flask</span> =
+<span class=3D"kn">import</span> <span class=3D"n">Flask</span><span class=
+=3D"p">,</span> <span class=3D"n">request</span>
+<span class=3D"kn">from</span> <span class=3D"nn">operations</span> <span c=
+lass=3D"kn">import</span> <span class=3D"n">add</span><span class=3D"p">,</=
+span> <span class=3D"n">sub</span><span class=3D"p">,</span> <span class=3D=
+"n">mult</span><span class=3D"p">,</span> <span class=3D"n">div</span>
+
+<span class=3D"n">app</span> <span class=3D"o">=3D</span> <span class=3D"n"=
+>Flask</span><span class=3D"p">(</span><span class=3D"vm">__name__</span><s=
+pan class=3D"p">)</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s2">"/add"</span><span =
+class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">do_add</span><span class=3D=
+"p">():</span>
+    <span class=3D"sd">"""Add a and b parameters."""</span>
+
+    <span class=3D"n">a</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"a"</span><span class=3D"p">))</span>
+    <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"b"</span><span class=3D"p">))</span>
+    <span class=3D"n">result</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">add</span><span class=3D"p">(</span><span class=3D"n">a</span><span=
+ class=3D"p">,</span> <span class=3D"n">b</span><span class=3D"p">)</span>
+
+    <span class=3D"k">return</span> <span class=3D"nb">str</span><span clas=
+s=3D"p">(</span><span class=3D"n">result</span><span class=3D"p">)</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s2">"/sub"</span><span =
+class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">do_sub</span><span class=3D=
+"p">():</span>
+    <span class=3D"sd">"""Subtract and b parameters."""</span>
+
+    <span class=3D"n">a</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"a"</span><span class=3D"p">))</span>
+    <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"b"</span><span class=3D"p">))</span>
+    <span class=3D"n">result</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">sub</span><span class=3D"p">(</span><span class=3D"n">a</span><span=
+ class=3D"p">,</span> <span class=3D"n">b</span><span class=3D"p">)</span>
+
+    <span class=3D"k">return</span> <span class=3D"nb">str</span><span clas=
+s=3D"p">(</span><span class=3D"n">result</span><span class=3D"p">)</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s2">"/mult"</span><span=
+ class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">do_mult</span><span class=
+=3D"p">():</span>
+    <span class=3D"sd">"""Multiply a and b parameters."""</span>
+
+    <span class=3D"n">a</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"a"</span><span class=3D"p">))</span>
+    <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"b"</span><span class=3D"p">))</span>
+    <span class=3D"n">result</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">mult</span><span class=3D"p">(</span><span class=3D"n">a</span><spa=
+n class=3D"p">,</span> <span class=3D"n">b</span><span class=3D"p">)</span>
+
+    <span class=3D"k">return</span> <span class=3D"nb">str</span><span clas=
+s=3D"p">(</span><span class=3D"n">result</span><span class=3D"p">)</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s2">"/div"</span><span =
+class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">do_div</span><span class=3D=
+"p">():</span>
+    <span class=3D"sd">"""Divide a and b parameters."""</span>
+
+    <span class=3D"n">a</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"a"</span><span class=3D"p">))</span>
+    <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"b"</span><span class=3D"p">))</span>
+    <span class=3D"n">result</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">div</span><span class=3D"p">(</span><span class=3D"n">a</span><span=
+ class=3D"p">,</span> <span class=3D"n">b</span><span class=3D"p">)</span>
+
+    <span class=3D"k">return</span> <span class=3D"nb">str</span><span clas=
+s=3D"p">(</span><span class=3D"n">result</span><span class=3D"p">)</span>
+
+<span class=3D"c1">### PART TWO</span>
+
+<span class=3D"n">operators</span> <span class=3D"o">=3D</span> <span class=
+=3D"p">{</span>
+        <span class=3D"s2">"add"</span><span class=3D"p">:</span> <span cla=
+ss=3D"n">add</span><span class=3D"p">,</span>
+        <span class=3D"s2">"sub"</span><span class=3D"p">:</span> <span cla=
+ss=3D"n">sub</span><span class=3D"p">,</span>
+        <span class=3D"s2">"mult"</span><span class=3D"p">:</span> <span cl=
+ass=3D"n">mult</span><span class=3D"p">,</span>
+        <span class=3D"s2">"div"</span><span class=3D"p">:</span> <span cla=
+ss=3D"n">div</span><span class=3D"p">,</span>
+        <span class=3D"p">}</span>
+
+<span class=3D"nd">@app</span><span class=3D"o">.</span><span class=3D"n">r=
+oute</span><span class=3D"p">(</span><span class=3D"s2">"/math/&lt;oper&gt;=
+"</span><span class=3D"p">)</span>
+<span class=3D"k">def</span> <span class=3D"nf">do_math</span><span class=
+=3D"p">(</span><span class=3D"n">oper</span><span class=3D"p">):</span>
+    <span class=3D"sd">"""Do math on a and b."""</span>
+
+    <span class=3D"n">a</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"a"</span><span class=3D"p">))</span>
+    <span class=3D"n">b</span> <span class=3D"o">=3D</span> <span class=3D"=
+nb">int</span><span class=3D"p">(</span><span class=3D"n">request</span><sp=
+an class=3D"o">.</span><span class=3D"n">args</span><span class=3D"o">.</sp=
+an><span class=3D"n">get</span><span class=3D"p">(</span><span class=3D"s2"=
+>"b"</span><span class=3D"p">))</span>
+    <span class=3D"n">result</span> <span class=3D"o">=3D</span> <span clas=
+s=3D"n">operators</span><span class=3D"p">[</span><span class=3D"n">oper</s=
+pan><span class=3D"p">](</span><span class=3D"n">a</span><span class=3D"p">=
+,</span> <span class=3D"n">b</span><span class=3D"p">)</span>
+
+    <span class=3D"k">return</span> <span class=3D"nb">str</span><span clas=
+s=3D"p">(</span><span class=3D"n">result</span><span class=3D"p">)</span>
+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+    </div>
+</div>
+
+
+
+=20
+
+</body></html>
+------MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/flask-greet-calc/_static/pygments.css
+
+@charset "utf-8";
+
+.highlight .hll { background-color: rgb(255, 255, 204); }
+
+.highlight { background: rgb(238, 255, 204); }
+
+.highlight .c { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .err { border: 1px solid rgb(255, 0, 0); }
+
+.highlight .k { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .o { color: rgb(102, 102, 102); }
+
+.highlight .ch { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cm { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cp { color: rgb(0, 112, 32); }
+
+.highlight .cpf { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .c1 { color: rgb(64, 128, 144); font-style: italic; }
+
+.highlight .cs { color: rgb(64, 128, 144); background-color: rgb(255, 240, =
+240); }
+
+.highlight .gd { color: rgb(160, 0, 0); }
+
+.highlight .ge { font-style: italic; }
+
+.highlight .gr { color: rgb(255, 0, 0); }
+
+.highlight .gh { color: rgb(0, 0, 128); font-weight: bold; }
+
+.highlight .gi { color: rgb(0, 160, 0); }
+
+.highlight .go { color: rgb(51, 51, 51); }
+
+.highlight .gp { color: rgb(198, 93, 9); font-weight: bold; }
+
+.highlight .gs { font-weight: bold; }
+
+.highlight .gu { color: rgb(128, 0, 128); font-weight: bold; }
+
+.highlight .gt { color: rgb(0, 68, 221); }
+
+.highlight .kc { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kd { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kn { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kp { color: rgb(0, 112, 32); }
+
+.highlight .kr { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .kt { color: rgb(144, 32, 0); }
+
+.highlight .m { color: rgb(32, 128, 80); }
+
+.highlight .s { color: rgb(64, 112, 160); }
+
+.highlight .na { color: rgb(64, 112, 160); }
+
+.highlight .nb { color: rgb(0, 112, 32); }
+
+.highlight .nc { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .no { color: rgb(96, 173, 213); }
+
+.highlight .nd { color: rgb(85, 85, 85); font-weight: bold; }
+
+.highlight .ni { color: rgb(213, 85, 55); font-weight: bold; }
+
+.highlight .ne { color: rgb(0, 112, 32); }
+
+.highlight .nf { color: rgb(6, 40, 126); }
+
+.highlight .nl { color: rgb(0, 32, 112); font-weight: bold; }
+
+.highlight .nn { color: rgb(14, 132, 181); font-weight: bold; }
+
+.highlight .nt { color: rgb(6, 40, 115); font-weight: bold; }
+
+.highlight .nv { color: rgb(187, 96, 213); }
+
+.highlight .ow { color: rgb(0, 112, 32); font-weight: bold; }
+
+.highlight .w { color: rgb(187, 187, 187); }
+
+.highlight .mb { color: rgb(32, 128, 80); }
+
+.highlight .mf { color: rgb(32, 128, 80); }
+
+.highlight .mh { color: rgb(32, 128, 80); }
+
+.highlight .mi { color: rgb(32, 128, 80); }
+
+.highlight .mo { color: rgb(32, 128, 80); }
+
+.highlight .sa { color: rgb(64, 112, 160); }
+
+.highlight .sb { color: rgb(64, 112, 160); }
+
+.highlight .sc { color: rgb(64, 112, 160); }
+
+.highlight .dl { color: rgb(64, 112, 160); }
+
+.highlight .sd { color: rgb(64, 112, 160); font-style: italic; }
+
+.highlight .s2 { color: rgb(64, 112, 160); }
+
+.highlight .se { color: rgb(64, 112, 160); font-weight: bold; }
+
+.highlight .sh { color: rgb(64, 112, 160); }
+
+.highlight .si { color: rgb(112, 160, 208); font-style: italic; }
+
+.highlight .sx { color: rgb(198, 93, 9); }
+
+.highlight .sr { color: rgb(35, 83, 136); }
+
+.highlight .s1 { color: rgb(64, 112, 160); }
+
+.highlight .ss { color: rgb(81, 121, 24); }
+
+.highlight .bp { color: rgb(0, 112, 32); }
+
+.highlight .fm { color: rgb(6, 40, 126); }
+
+.highlight .vc { color: rgb(187, 96, 213); }
+
+.highlight .vg { color: rgb(187, 96, 213); }
+
+.highlight .vi { color: rgb(187, 96, 213); }
+
+.highlight .vm { color: rgb(187, 96, 213); }
+
+.highlight .il { color: rgb(32, 128, 80); }
+------MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/flask-greet-calc/_static/handouts-sphinx.css
+
+@charset "utf-8";
+
+body { margin: 0px; background-color: rgb(239, 239, 246); }
+
+#toc { display: none; }
+
+@media (min-width: 1200px) {
+  #page-wrapper { display: flex; }
+  #page-sidebar { display: block; width: 275px; background-color: rgb(72, 7=
+2, 94); color: rgb(221, 221, 221); }
+  #toc { display: block; }
+}
+
+#page-sidebar > header { padding: 1em; text-align: center; color: white; ba=
+ckground-color: rgb(0, 192, 157); }
+
+#page-sidebar a { color: inherit; text-decoration: none; }
+
+#page-sidebar .project { font-size: 90%; }
+
+#page-sidebar .title { font-size: 110%; }
+
+#page-sidebar .backlink { font-size: 70%; }
+
+#toc { padding: 1em; }
+
+#toc ul { list-style: none; margin-left: 0px; padding-left: 0px; }
+
+#toc > ul > li > a { display: none; }
+
+#toc > ul > li > ul > li { margin-bottom: 1em; }
+
+#toc > ul > li > ul > li > ul { padding-left: 1em; font-size: 80%; }
+
+#toc > ul > li > ul > li > ul li { margin-top: 0.5em; }
+
+#page-content { margin: 2em 3% 4em; max-width: 800px; min-height: 100vh; }
+
+@media (min-width: 768px) {
+  #page-content { margin-left: 7%; margin-right: 7%; }
+}
+
+@media (min-width: 1200px) {
+  #page-content { margin-left: 100px; margin-right: auto; width: 800px; }
+}
+
+@media print {
+  #page-sidebar { display: none; }
+  #page-content { margin-top: 0px; margin-left: 0px; margin-bottom: 0px; wi=
+dth: 100%; }
+}
+
+.field-name { text-align: left; }
+
+.section a { text-decoration: none; }
+
+@media print {
+  .section a::after { content: " <" attr(href) ">"; }
+}
+
+.clear { clear: both; }
+
+.function table { border-bottom: none; }
+
+.function dd { margin-left: 1em; }
+
+.function .field-body { border: none; padding-left: 0px !important; padding=
+-right: 0px !important; margin-bottom: 0px !important; padding-bottom: 0px =
+!important; }
+
+.function .field-body p.last { margin-bottom: 0px; }
+
+.function .field-name { border: none; text-align: right; padding-left: 0px =
+!important; }
+
+.function .field-body ul { margin-top: 0px; padding: 0px; list-style: none;=
+ }
+
+.function .field-body ul li { margin-bottom: 0.5em; }
+
+.function .field-body .first { margin-top: 0px; }
+
+.function code { font-weight: bold; color: inherit !important; border: none=
+ !important; padding: 0px !important; }
+
+table { border: none; border-collapse: collapse; border-spacing: 0px; empty=
+-cells: show; }
+
+table.hlist td { vertical-align: top; }
+
+table.hlist ul { margin-top: 0px; margin-bottom: 0px; }
+
+table.docutils { border-bottom: 1px solid rgb(204, 204, 204); }
+
+table.docutils td, th { border-right: none; border-bottom: none; border-lef=
+t: none; border-image: initial; border-top: 1px solid rgb(204, 204, 204); p=
+adding: 0.3em; margin: 0px; }
+
+.raw-reveal { display: none; }
+
+img.image-border { border: 1px solid black; }
+
+.line-block { margin: 0.5em 0px; }
+
+blockquote { font-style: italic; }
+
+body { font-family: Roboto, sans-serif; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 600; font-family: Roboto, sans-serif;=
+ }
+
+dt { font-weight: 600; }
+
+pre { font-family: "Source Code Pro", "Andale Mono WT", "Andale Mono", "Luc=
+ida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera=
+ Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Cou=
+rier, monospace; font-size: 90%; }
+
+.highlight { background-color: white; border: 1px solid rgb(221, 221, 221);=
+ margin: 0.2em 0px 0.4em; }
+
+.highlight pre { margin: 0.6em; }
+
+code { color: rgb(231, 76, 60); font-family: "Source Code Pro", "Andale Mon=
+o WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu S=
+ans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", =
+Monaco, "Courier New", Courier, monospace; border: 1px solid rgb(238, 238, =
+238); padding: 0px 5px; font-size: 90%; }
+
+pre.literal-block { background-color: white; border: 1px solid rgb(221, 221=
+, 221); margin: 0.2em 0px 0.4em; padding: 0.6em; }
+
+@media print {
+  body { }
+  code { color: rgb(85, 0, 0); border: 1px solid rgb(204, 204, 204); font-w=
+eight: bold; }
+  .highlight, pre.literal-block { border: 1px solid rgb(221, 221, 221); }
+}
+
+.sidebar { margin-left: 1.5em; float: right; width: 15em; font-size: 90%; }
+
+.sidebar15x { width: 18em; }
+
+.admonition, .sidebar { padding: 0px 1em 0.35em; background-color: rgb(234,=
+ 242, 247); }
+
+@media print {
+  .admonition, .sidebar { border-width: 1px 1px 1px 5px; border-style: soli=
+d; border-color: rgb(204, 204, 204); border-image: initial; }
+}
+
+.admonition.warning { background-color: rgb(250, 237, 220); }
+
+.admonition > p:nth-child(1), .sidebar-title { font-weight: bold; margin: 0=
+px -1em -0.25em; padding: 0.25em 1em; background-color: rgb(122, 176, 206);=
+ color: white; }
+
+.admonition.warning > p:nth-child(1) { background-color: rgb(219, 163, 118)=
+; }
+
+.admonition.note > p:nth-child(1)::before { content: "Note: "; }
+
+.admonition.warning > p:nth-child(1)::before { content: "Warning: "; }
+
+cite { font-weight: 600; }
+
+img.align-right { float: right; }
+
+.code-block-caption { font-style: italic; font-size: 90%; margin-bottom: 0.=
+5em; }
+
+div.highlight, pre.literal-block { max-width: 38em; min-width: 39em; }
+
+.compare div.highlight, .compare pre.literal-block { min-width: 20em; max-w=
+idth: 21em; }
+
+.compare23 > div:first-child div.highlight, .compare23 > div:first-child di=
+v.literal-block, .compare32 > div:last-child div.highlight, .compare32 > di=
+v:last-child div.literal-block { min-width: 14em; max-width: 15em; }
+
+.compare23 > div:last-child div.highlight, .compare23 > div:last-child div.=
+literal-block, .compare32 > div:first-child div.highlight, .compare32 > div=
+:first-child div.literal-block { min-width: 26em; max-width: 27em; }
+
+.compare12 > div:first-child div.highlight, .compare12 > div:first-child di=
+v.literal-block, .compare21 > div:last-child div.highlight, .compare21 > di=
+v:last-child div.literal-block { min-width: 12em; max-width: 13em; }
+
+.compare12 > div:last-child div.highlight, .compare12 > div:last-child div.=
+literal-block, .compare21 > div:first-child div.highlight, .compare21 > div=
+:first-child div.literal-block { min-width: 28em; max-width: 29em; }
+
+h1 { background-image: url("logo.png"); background-repeat: no-repeat; backg=
+round-position: right center; background-size: contain; }
+
+h1 + table.field-list { margin-top: 2em; }
+
+h2 { margin-top: 2em; }
+
+.red { color: rgb(204, 0, 0); font-weight: bold; }
+
+.blue { color: rgb(34, 136, 204); font-weight: bold; }
+
+.inv-red { background-color: rgb(204, 0, 0); color: rgb(255, 255, 255); fon=
+t-weight: bold; }
+
+.orange { color: rgb(255, 136, 0); font-weight: bold; }
+
+.green { color: rgb(51, 187, 51); font-weight: bold; }
+
+.tan { color: rgb(218, 165, 32); font-weight: bold; }
+
+.cyan { color: rgb(0, 204, 204); font-weight: bold; }
+
+.gone { color: rgb(102, 102, 102); text-decoration: line-through; }
+
+.console .highlight { max-width: 45em; border: none; }
+
+pre.literal-block.console, .console .highlight pre { border: 1px solid rgb(=
+221, 221, 221); background-color: rgb(51, 51, 51); color: rgb(221, 221, 221=
+); padding: 1em; border-radius: 0.4em; margin: 1.5em 0px; max-width: 45em; =
+font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "=
+Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "L=
+iberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace=
+; font-size: 12px; line-height: 1.5; }
+
+kbd { font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Conso=
+le", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mon=
+o", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, mon=
+ospace; }
+
+.console .cmd { font-weight: bold; color: yellow; }
+
+.console a { color: inherit !important; }
+
+.console .red { color: rgb(255, 51, 51); }
+
+.console .blue { color: rgb(68, 170, 255); }
+
+.console .orange { color: rgb(255, 204, 51); }
+
+.console .green { color: rgb(51, 255, 51); }
+
+.console .tan { color: rgb(218, 165, 32); }
+
+.console .cyan { color: rgb(0, 255, 255); }
+
+.console .gone { color: rgb(102, 102, 102); text-decoration: line-through; =
+}
+
+.left { text-align: left; }
+
+dd { margin-bottom: 0.5em !important; }
+
+cite { font-weight: bold; font-style: italic !important; }
+
+.compare > div { width: 49%; display: inline-block; vertical-align: top; }
+
+.compare23 > div:first-child { width: 39%; }
+
+.compare23 > div:last-child { width: 59%; }
+
+.compare32 > div:first-child { width: 59%; }
+
+.compare32 > div:last-child { width: 39%; }
+
+.compare12 > div:first-child { width: 32%; }
+
+.compare12 > div:last-child { width: 65%; }
+
+.compare21 > div:first-child { width: 65%; }
+
+.compare21 > div:last-child { width: 32%; }
+
+.hover-reveal::before { content: "Hover to reveal"; position: absolute; }
+
+.hover-reveal:hover::before { content: ""; }
+
+.hover-reveal > * { visibility: hidden; }
+
+.topic-title { margin-top: 0px; }
+
+.hover-reveal { border: 1px dashed rgb(153, 153, 153); background-color: rg=
+b(238, 238, 238); padding: 1em; margin-bottom: 1em; }
+
+.hover-reveal:hover > * { visibility: visible; }
+
+.hover-reveal:hover { background-color: transparent; }
+
+@media print {
+  .hover-reveal > * { visibility: visible; }
+  .hover-reveal::before { content: ""; }
+  .hover-reveal { border: none; background-color: transparent; padding: 0px=
+; margin-bottom: 1em; }
+  .noprint { display: none !important; }
+  .simple { }
+  .simple li, .simple ol { break-inside: avoid; }
+  .console { background-color: rgb(245, 245, 245) !important; color: rgb(14=
+0, 140, 140) !important; }
+  .console .cmd { color: black; }
+}
+
+#page-content > .section > .section:first-of-type h2 { margin-top: 1em; }
+
+h1 { margin: 0px; padding: 0px; }
+
+ul { padding-left: 1.5em; list-style: disc; }
+
+ul.simple li { margin: 0.5em 0px; }
+
+.hlist ul { margin-right: 5em; }
+
+dt { margin-bottom: 0.25em; }
+
+dd { margin-left: 1.5em; }
+
+dd > p.first { margin-top: 0px; }
+
+.td-center th:not(:first-child), .td-center td:not(:first-child) { text-ali=
+gn: center; }
+
+.td-right th:not(:first-child), .td-right td:not(:first-child) { text-align=
+: right; }
+------MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE----
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: https://curric.springboard.com/software-engineering-career-track/default/exercises/flask-greet-calc/_static/logo.png
+
+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
+ED1cOf+rh/oAAAAASUVORK5CYII=
+
+------MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE----
+Content-Type: text/css
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://fonts.googleapis.com/css?family=Roboto:400,600,700,400italic,600italic,700italic|Source+Code+Pro:400,700
+
+@charset "utf-8";
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xFIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, =
+U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xMIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4=
+B0-4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xEIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xLIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xHIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129,=
+ U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xGIzIXKMnyr=
+Yk.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U=
++2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOkCnqEu92Fr1Mu51xIIzIXKMny.=
+woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC=
+, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,=
+ U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic3CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20=
+B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic-CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491,=
+ U+4B0-4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic2CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic5CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic1CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-=
+129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic0CsTYl=
+4BOQ3o.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EF=
+F, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: italic; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOjCnqEu92Fr1Mu51TzBic6CsTYl=
+4BO.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB=
+-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2=
+193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu72xKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4, U+2=
+DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu5mxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+4B0-=
+4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7mxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4WxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7WxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129, U+=
+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu7GxKKTU1Kvnz.=
+woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, U+20=
+20, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 400; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.wo=
+ff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, =
+U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U=
++2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCRc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+460-52F, U+1C80-1C88, U+20B4,=
+ U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfABc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+301, U+400-45F, U+490-491, U+=
+4B0-4B1, U+2116; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCBc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+1F00-1FFF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBxc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+370-3FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfCxc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+102-103, U+110-111, U+128-129=
+, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U+20AB; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfChc4AMP6l=
+bBP.woff2") format("woff2"); unicode-range: U+100-24F, U+259, U+1E00-1EFF, =
+U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+
+@font-face { font-family: Roboto; font-style: normal; font-weight: 700; src=
+: url("https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlfBBc4AMP6l=
+Q.woff2") format("woff2"); unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2=
+BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+219=
+3, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMOvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+460=
+-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlOevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+301=
+, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+1F0=
+0-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+370=
+-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+102=
+-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U=
++20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlM-vWnsUnxlC9.woff2") format("woff2"); unicode-range: U+100=
+-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-=
+2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 400; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPevWnsUnxg.woff2") format("woff2"); unicode-range: U+0-FF,=
+ U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+2=
+0AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMOvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+460=
+-52F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlOevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+301=
+, U+400-45F, U+490-491, U+4B0-4B1, U+2116; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMevWnsUnxlC9.woff2") format("woff2"); unicode-range: U+1F0=
+0-1FFF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+370=
+-3FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlMuvWnsUnxlC9.woff2") format("woff2"); unicode-range: U+102=
+-103, U+110-111, U+128-129, U+168-169, U+1A0-1A1, U+1AF-1B0, U+1EA0-1EF9, U=
++20AB; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlM-vWnsUnxlC9.woff2") format("woff2"); unicode-range: U+100=
+-24F, U+259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-=
+2C7F, U+A720-A7FF; }
+
+@font-face { font-family: "Source Code Pro"; font-style: normal; font-weigh=
+t: 700; src: url("https://fonts.gstatic.com/s/sourcecodepro/v22/HI_SiYsKILx=
+Rpg3hIP6sJ7fM7PqlPevWnsUnxg.woff2") format("woff2"); unicode-range: U+0-FF,=
+ U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+2000-206F, U+2074, U+2=
+0AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+------MultipartBoundary--ftsNtyhuux25e4kUVyydxoUyXkjHYwF5DQw0c1FHpE------
