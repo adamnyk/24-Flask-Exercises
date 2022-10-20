@@ -1,6 +1,6 @@
 **/24.1 flask-greet-calc/venv/
-/24.2*flask-madlibs/venv/
-/24.2*flask-madlibs/__pycache__/
+**/24.2 flask-madlibs/venv/
+**/24.2 flask-madlibs/__pycache__/
 **/24.3 flask-survey/__pycache__/
 **/24.3 flask-survey/venv/
 
