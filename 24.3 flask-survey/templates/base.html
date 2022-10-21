@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css">
     <title>Customer Satisfaction Survey</title>
 </head>
+
 <body>
-    {% block content %}
-    
-    {% endblock  %}
+    {% for category, msg in get_flashed_messages(with_categories=true) %}
+    <p class='{{category}}'>{{ msg }}</p>
+    {% endfor %} {% block content %} {% endblock %}
 </body>
+
+</html>
