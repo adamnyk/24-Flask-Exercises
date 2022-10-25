@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Boggle!</title>
+</head>
+
+<body>
+
+    <h1>Boggle!</h1>
+
+
+        <form action="" method="POST" id="word-form">
+            <label for="word">Enter word:</label>
+            <input name= 'word' id="word" autofocus>
+            <button type="submit">Enter</button>
+        </form>
+
+    <br>
+
+
+
+        <section id="boggle">
+            <table class="board">
+                {% for row in session['board'] %}
+                <tr>
+                    {% for letter in row %}
+                    <td> {{letter}} </td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </section>
+
+
+
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios/dist/axios.js"></script>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
