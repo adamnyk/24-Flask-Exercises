@@ -1,5 +1,5 @@
 from boggle import Boggle
-from flask import Flask, request, render_template, redirect, session
+from flask import Flask, request, render_template, redirect, session, jsonify
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "abc123"
@@ -19,6 +19,11 @@ def board():
 
 @app.route("/check_word")
 def check_guess():
-    word = request.args('word')
-    result = boggle_game.check_valid_word(session['board'], word)
-    return result
+    '''Check if word is in dictionary and on board.'''
+    word = request.args["word"]
+    board = session["board"]
+    response = boggle_game.check_valid_word(board, word)
+    
+
+    return response
+    # return jsonify({"result": response})
