@@ -1,6 +1,8 @@
 from app import app, session
 from unittest import TestCase
 
+app.config['TESTING'] = True
+app.config['DEBUG_TB_HOSTS'] = ['dont-show-debug-toolbar']
 
 class SurveyTestCase(TestCase):
     def test_start_page(self):
