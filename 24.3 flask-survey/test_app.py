@@ -16,14 +16,13 @@ class SurveyTestCase(TestCase):
 
     def test_start_redirect(self):
         with app.test_client() as client:
-            res = client.get('/reset_session', follow_redirects=True)
-            
+            res = client.post("/reset_session")
+
             self.assertEqual(res.status_code, 302)
-            self.assertEqual(res.location, 'http://localhost/questions/0')
-            
+            self.assertEqual(res.location, "questions/0")
 
-
-        # not working right now
+# not working right now -POST TEST-
+    def test_submit_answer(self):
         with app.test_client() as client:
             res = client.post("/answer", data={"answer", "Yes"})
             responses = session["responses"]
