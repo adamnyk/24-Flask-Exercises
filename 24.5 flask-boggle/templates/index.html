@@ -13,30 +13,36 @@
 
     <h1>Boggle!</h1>
 
-
-        <form action="" method="POST" id="word-form">
-            <label for="word">Enter word:</label>
-            <input name= 'word' id="word" autofocus>
-            <button type="submit">Enter</button>
-        </form>
-
-    <br>
-
-
-
-        <section id="boggle">
-            <table class="board">
-                {% for row in session['board'] %}
-                <tr>
-                    {% for letter in row %}
-                    <td> {{letter}} </td>
-                    {% endfor %}
-                </tr>
+    <div id="boggle">
+        <table class="board">
+            {% for row in session['board'] %}
+            <tr>
+                {% for letter in row %}
+                <td> {{letter}} </td>
                 {% endfor %}
-            </table>
-        </section>
+            </tr>
+            {% endfor %}
+        </table>
+        <span id="score" class="alignleft">Score: 0</span>
+        <span id="timer" class="alignright">Time remaining: 60</span>
+    </div>
+    
 
+    <form action="" method="POST" id="word-form" >
+        <label for="word">Enter word:</label>
+        <input name='word' id="word" autofocus>
+        <button type="submit">Enter</button>
+    </form>
+    
+    <p id="msg" hidden></p>
+    
+    <div class="found-words" hidden>
+        <h4>Words found:</h4>
+        <ul id="found-words"> 
 
+        </ul>
+    </div>
+    
 
 
     <script src="https://unpkg.com/jquery"></script>

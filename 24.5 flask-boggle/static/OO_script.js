@@ -1,3 +1,8 @@
+
+
+
+
+
 const foundWords = new Set();
 let score = 0;
 let secsRemaining = 60;
