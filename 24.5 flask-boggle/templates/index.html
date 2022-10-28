@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/static/style.css" />
+		<title>Boggle!</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/style.css">
-    <title>Boggle!</title>
-</head>
+	<body>
+		<h1>Boggle!</h1>
 
-<body>
+		<section id="boggle">
+			<div class="game-container">
+				<div id="game" class="alignleft">
+					<span>Highscore: {{session['highscore']}}</span>
+					<span class="nplays">Games played: {{session['nplays']}}</span>
+					<table class="board">
+						{% for row in session['board'] %}
+						<tr>
+							{% for letter in row %}
+							<td>{{letter}}</td>
+							{% endfor %}
+						</tr>
+						{% endfor %}
+					</table>
+					<span id="score" class="alignleft">Score: 0</span>
+					<span id="timer" class="alignright">Time remaining: 60</span>
+				</div>
 
-    <h1>Boggle!</h1>
+				<div class="found-words alignright" hidden>
+					<h4>Words found:</h4>
+					<ul id="found-words"></ul>
+				</div>
 
-    <div id="boggle">
-        <table class="board">
-            {% for row in session['board'] %}
-            <tr>
-                {% for letter in row %}
-                <td> {{letter}} </td>
-                {% endfor %}
-            </tr>
-            {% endfor %}
-        </table>
-        <span id="score" class="alignleft">Score: 0</span>
-        <span id="timer" class="alignright">Time remaining: 60</span>
-    </div>
-    
+				<form action="" method="POST" id="word-form">
+					<input name="word" id="word" placeholder="enter word" autofocus />
+					<button type="submit">Enter</button>
+				</form>
+			</div>
+			<p id="msg" hidden></p>
+		</section>
 
-    <form action="" method="POST" id="word-form" >
-        <label for="word">Enter word:</label>
-        <input name='word' id="word" autofocus>
-        <button type="submit">Enter</button>
-    </form>
-    
-    <p id="msg" hidden></p>
-    
-    <div class="found-words" hidden>
-        <h4>Words found:</h4>
-        <ul id="found-words"> 
+		<script src="https://unpkg.com/jquery"></script>
+		<script src="https://unpkg.com/axios/dist/axios.js"></script>
 
-        </ul>
-    </div>
-    
-
-
-    <script src="https://unpkg.com/jquery"></script>
-    <script src="https://unpkg.com/axios/dist/axios.js"></script>
-
-    <script src="/static/script.js"></script>
-</body>
-
+		<!-- <script src="/static/script.js"></script> -->
+		<script src="/static/OO_script.js"></script>
+	</body>
 </html>

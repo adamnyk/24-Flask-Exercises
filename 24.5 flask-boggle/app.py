@@ -13,7 +13,7 @@ boggle_game = Boggle()
 
 
 @app.route("/")
-def board():
+def home():
     """Show boggle board."""
 
     board = boggle_game.make_board()
@@ -30,6 +30,8 @@ def check_guess():
     response = boggle_game.check_valid_word(board, word)
 
     # return response
+    
+    # doesnt need to be sent as Json, could be just a string with no k:v pair. See above commented out code. 
     return jsonify({"result": response})
 
 
@@ -44,7 +46,7 @@ def post_score():
     session["highscore"] = max(score, highscore)
 
 
-    import pdb
-    pdb.set_trace()
+    # import pdb
+    # pdb.set_trace()
 
     return jsonify(brokeRecord=score > highscore)

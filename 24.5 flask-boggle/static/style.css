@@ -1,14 +1,20 @@
-
 td {
-    padding: .5em .75em;
-    font-size: 1.5em;
-    font-weight: bold;
-    border: solid grey;
-
+	padding: 0.5em 0.75em;
+	font-size: 1.5em;
+	font-weight: bold;
+	border: solid grey;
 }
 
-#boggle {
-    display: inline-block;
+.game-container {
+	display: inline-block;
+}
+
+.nplays {
+	margin-left: 5.5em;
+}
+
+div.found-words {
+	margin-left: 10px;
 }
 .alignleft {
 	float: left;
@@ -17,24 +23,24 @@ td {
 	float: right;
 }
 
-form {
-    margin: 16px;
+#word {
+	margin-top: 10px;
 }
 
 p.err {
-    background-color: tomato;
-    color: white;
-    padding: 16px;
+	background-color: tomato;
+	color: white;
+	padding: 16px;
 }
 
 p.ok {
-    background-color: mediumseagreen;
-    color: white;
-    padding: 16px;
+	background-color: mediumseagreen;
+	color: white;
+	padding: 16px;
 }
 
 p.game-over {
-    background-color: darkred;
-    color: white;
-    padding: 16px;
+	background-color: darkred;
+	color: white;
+	padding: 16px;
 }
